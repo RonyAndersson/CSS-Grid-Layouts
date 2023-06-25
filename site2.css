@@ -1,0 +1,88 @@
+*{
+
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    text-align: center;
+    list-style: none;
+}
+
+/* ------------------- EXERCICIO COMPLETO --------------------- */
+#site *{
+    margin: 0;
+    padding: 0;
+}
+
+#site{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 150px 70px 1fr 70px;
+
+    grid-template-areas: 
+        "header header header header header"
+        "menu menu menu menu menu"
+        "conteudo conteudo conteudo conteudo lateral"
+        "footer footer footer footer footer";
+
+    gap: 20px;
+    width: 75%;
+    height: 1000px;
+    margin: 0 auto;
+    border: 1px solid #222;
+}
+
+#header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+
+    background-color: #222;
+    color: white;
+}
+
+#menu{
+    grid-area: menu;
+    background-color: lightgreen;
+    color: #222;
+}
+
+.menu__list{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#conteudo{
+    background-color: wheat;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-area: conteudo;
+    gap: 25px;
+    padding: 20px;
+}
+
+#conteudo .articulo{
+    background-color: brown;
+    border: 1px solid #555;
+}
+
+#lateral{
+    background: darkgreen;
+    color: black;
+    grid-area: lateral;
+ 
+}
+
+#footer{
+    background-color: #222;
+    color: white;
+    grid-area: footer;
+}
